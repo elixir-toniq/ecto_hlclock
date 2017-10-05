@@ -1,18 +1,20 @@
-defmodule EctoHlclock do
+defmodule EctoHLClock do
   @moduledoc """
-  Documentation for EctoHlclock.
+  Provides capability for storing HLC's in the database
   """
 
-  @doc """
-  Hello world.
+  alias HLClock.Timestamp
 
-  ## Examples
+  @behaviour Ecto.Type
 
-      iex> EctoHlclock.hello
-      :world
+  def type, do: :binary
 
-  """
-  def hello do
-    :world
-  end
+  def cast(t) when is_binary(t), do: {:ok, Timestamp.decode(t)}
+  def cast(%Timestamp{} = t), do: {:ok, t}
+  def cast(_), do: :error
+
+  def load(bin), do: {:ok, Timestamp.decode(bin)}
+
+  def dump(%Timestamp{} = t), do: {:ok, Timestamp.encode(t)}
+  def dump(_), do: :error
 end
