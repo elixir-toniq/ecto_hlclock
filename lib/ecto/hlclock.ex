@@ -1,11 +1,11 @@
-defmodule EctoHLClock do
+defmodule Ecto.HLClock do
   @moduledoc """
   Provides capability for storing HLC's in the database
   """
 
-  alias HLClock.Timestamp
-
   @behaviour Ecto.Type
+
+  alias HLClock.Timestamp
 
   def type, do: :binary
 

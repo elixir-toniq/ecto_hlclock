@@ -1,4 +1,4 @@
-defmodule EctoHLClock.Migration.EctoHLCMigration do
+defmodule Ecto.HLClock.Migration do
   @moduledoc """
 
   """
