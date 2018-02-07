@@ -1,4 +1,4 @@
-defmodule EctoHlclockTest do
+defmodule Ecto.HLClockTest do
   use ExUnit.Case
 
   alias HLClock.Timestamp
