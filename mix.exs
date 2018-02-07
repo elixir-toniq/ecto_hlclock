@@ -1,5 +1,7 @@
-defmodule EctoHlclock.Mixfile do
+defmodule Ecto.HLClock.Mixfile do
   use Mix.Project
+
+  @source_url "https://github.com/toniqsystems/ecto_hlclock"
 
   def project do
     [
@@ -11,7 +13,11 @@ defmodule EctoHlclock.Mixfile do
       package: package(),
       deps: deps(),
       name: "Ecto.HLClock",
-      source_url: "https://github.com/toniqsystems/ecto_hlclock"
+      source_url: @source_url,
+      docs: [
+        source_url: @source_url,
+        extras: ["README.md"]
+      ]
     ]
   end
 
@@ -32,7 +38,8 @@ defmodule EctoHlclock.Mixfile do
       {:ecto, "~> 2.2"},
       {:hlclock, "~> 0.1"},
       {:credo, "~> 0.5", only: [:dev, :test]},
-      {:dialyxir, "~> 0.5", only: :dev, runtime: false}
+      {:dialyxir, "~> 0.5", only: :dev, runtime: false},
+      {:ex_doc, "~> 0.16", only: :dev, runtime: false}
     ]
   end
 
@@ -42,7 +49,10 @@ defmodule EctoHlclock.Mixfile do
       files: ["lib", "mix.exs", "README.md"],
       maintainers: ["Neil Menne", "Chris Keathley"],
       licenses: ["MIT"],
-      links: %{"GitHub" => "https://github.com/toniqsystems/ecto_hlclock"}
+      links: %{
+        "GitHub" => @source_url,
+        "Docs" => "http://hexdocs.pm/ecto_hlclock"
+      }
     ]
   end
 end
