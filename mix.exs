@@ -6,7 +6,7 @@ defmodule Ecto.HLClock.Mixfile do
   def project do
     [
       app: :ecto_hlclock,
-      version: "0.1.0",
+      version: "0.1.1",
       elixir: "~> 1.5",
       start_permanent: Mix.env() == :prod,
       description: description(),
@@ -48,7 +48,7 @@ defmodule Ecto.HLClock.Mixfile do
       name: :ecto_hlclock,
       files: ["lib", "mix.exs", "README.md"],
       maintainers: ["Neil Menne", "Chris Keathley"],
-      licenses: ["MIT"],
+      licenses: ["Apache 2.0"],
       links: %{
         "GitHub" => @source_url,
         "Docs" => "http://hexdocs.pm/ecto_hlclock"
