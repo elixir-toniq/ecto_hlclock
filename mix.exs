@@ -6,8 +6,8 @@ defmodule Ecto.HLClock.Mixfile do
   def project do
     [
       app: :ecto_hlclock,
-      version: "0.1.1",
-      elixir: "~> 1.5",
+      version: "0.1.2",
+      elixir: "~> 1.7",
       start_permanent: Mix.env() == :prod,
       description: description(),
       package: package(),
@@ -35,11 +35,12 @@ defmodule Ecto.HLClock.Mixfile do
 
   defp deps do
     [
-      {:ecto, "~> 2.2"},
+      {:ecto, "~> 3.0"},
+      {:ecto_sql, "~> 3.0"},
       {:hlclock, "~> 0.1"},
-      {:credo, "~> 0.5", only: [:dev, :test]},
+      {:credo, "~> 1.0", only: [:dev, :test]},
       {:dialyxir, "~> 0.5", only: :dev, runtime: false},
-      {:ex_doc, "~> 0.16", only: :dev, runtime: false}
+      {:ex_doc, "~> 0.19", only: :dev, runtime: false}
     ]
   end
 
