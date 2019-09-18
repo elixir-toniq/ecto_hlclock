@@ -12,7 +12,7 @@ defmodule Ecto.HLClock.Mixfile do
       description: description(),
       package: package(),
       deps: deps(),
-      name: "Ecto.HLClock",
+      name: "EctoHLClock",
       source_url: @source_url,
       docs: [
         source_url: @source_url,

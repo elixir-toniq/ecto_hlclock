@@ -1,4 +1,4 @@
-# Ecto.HLClock
+# EctoHLClock
 
 Provides the necessary [Ecto](https://github.com/elixir-ecto/ecto) type
 information for [hybrid logical clocks](https://github.com/tonic-sys/hlclock).
@@ -27,7 +27,7 @@ alter table (:your_table) do
   add :hlc_column, :binary, null: false
 end
 
-Ecto.HLClock.Migration.create_hlc_constraint(:your_table, :hlc_column)
+EctoHLClock.Migration.create_hlc_constraint(:your_table, :hlc_column)
 ```
 
 `create_hlc_constraint`, by design, creates a deterministic naming convention

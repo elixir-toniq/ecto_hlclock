@@ -1,4 +1,4 @@
-defmodule Ecto.HLClock.Migration do
+defmodule EctoHLClock.Migration do
   @moduledoc """
   Ecto migration helper for adding constraints to the HLC `:binary` column to
   help ensure that only valid HLCs are stored
