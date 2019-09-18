@@ -1,4 +1,4 @@
-defmodule Ecto.HLClock do
+defmodule EctoHLClock do
   @moduledoc """
   Provides capability for storing HLC's in the database
   """

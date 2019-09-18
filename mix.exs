@@ -12,7 +12,7 @@ defmodule Ecto.HLClock.Mixfile do
       description: description(),
       package: package(),
       deps: deps(),
-      name: "Ecto.HLClock",
+      name: "EctoHLClock",
       source_url: @source_url,
       docs: [
         source_url: @source_url,
@@ -37,7 +37,7 @@ defmodule Ecto.HLClock.Mixfile do
     [
       {:ecto, "~> 3.0"},
       {:ecto_sql, "~> 3.0"},
-      {:hlclock, "~> 0.1"},
+      {:hlclock, "~> 1.0"},
       {:credo, "~> 1.0", only: [:dev, :test]},
       {:dialyxir, "~> 0.5", only: :dev, runtime: false},
       {:ex_doc, "~> 0.19", only: :dev, runtime: false}
