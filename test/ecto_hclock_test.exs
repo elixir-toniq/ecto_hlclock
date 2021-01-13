@@ -22,6 +22,8 @@ defmodule EctoHLClockTest do
     end
 
     test "equal?/2" do
+      assert EctoHLClock.equal?(nil, nil)
+
       t0 = Timestamp.new(System.os_time(:millisecond), 0, 0)
 
       assert EctoHLClock.equal?(t0, t0)
@@ -37,6 +39,10 @@ defmodule EctoHLClockTest do
       t3 = %{t0 | node_id: 1}
 
       refute EctoHLClock.equal?(t0, t3)
+
+      [t4, t5] = Enum.shuffle([t0, nil])
+
+      refute EctoHLClock.equal?(t4, t5)
     end
   end
 end

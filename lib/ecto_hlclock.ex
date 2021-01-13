@@ -23,5 +23,7 @@ defmodule EctoHLClock do
   def dump(_), do: :error
 
   @impl Ecto.Type
-  def equal?(t0, t1), do: Timestamp.compare(t0, t1) == :eq
+  def equal?(%Timestamp{} = t0, %Timestamp{} = t1), do: Timestamp.compare(t0, t1) == :eq
+  def equal?(nil, nil), do: true
+  def equal?(_, _), do: false
 end
