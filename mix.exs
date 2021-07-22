@@ -6,7 +6,7 @@ defmodule EctoHLClock.Mixfile do
   def project do
     [
       app: :ecto_hlclock,
-      version: "0.2.1",
+      version: "0.3.0",
       elixir: "~> 1.7",
       start_permanent: Mix.env() == :prod,
       description: description(),
