@@ -8,9 +8,6 @@ defmodule EctoHLClock do
   alias HLClock.Timestamp
 
   @impl Ecto.Type
-  def autogenerate, do: HLCID.generate()
-
-  @impl Ecto.Type
   def type, do: :binary
 
   @impl Ecto.Type
